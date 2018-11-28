@@ -1,0 +1,11 @@
+//By Zoe Lavoie
+//Reflection
+
+October 7th, 2016
+ Homework Assignment 4
+     I thought this week's problems were not too difficult however they took a long time due
+     to the detail and the greater complexity of loops and using methods. The hardest problem
+     for me was Inspid and Squareroot. Inspid I had an issue with methods not returning what they
+     were supposed to, and squareroot I had issues with cutting off the next number when the preceeding
+     two square root calculations matched up to four decimal places. Methods are not too bad, but I get 
+     annoyed that a method can only return one value. 
