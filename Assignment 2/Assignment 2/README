@@ -1,0 +1,71 @@
+Assignment 2 
+0 [WARMUP].  Write a digit to text converter for the digits 0 to 9. If the user enters the digit 0 then your converter prints out the string "zero".
+
+Welcome to the Digit to Text Converter!
+Enter your digit: 7
+You typed in the digit seven!
+Bye! 
+
+Welcome to the Digit to Text Converter!
+Enter your digit: 4
+You typed in the digit four!
+Bye! 
+
+1.  PhoneCall.java
+
+Write a program  that calculates the cost of a long distance phone call.  The calling rates are as follows:
+Day : 15 cents/minute
+Evening: 7 cents/minute
+Weekend: 5 cents/minute
+Your program should accept the length of a call in minutes and the rate code (use integers 0,1, and 2). It will calculate the cost of a call.  Your program should note any invalid data.  (A switch statement would work well here. Use one.)
+ 
+Sample Run
+Enter the length of the call: 20
+Enter the rate code: 1
+The cost of the call is $1.40
+Enter the length of the call: 20
+Enter the rate code: 5
+Illegal rate code
+ 
+Note: The cost of a call may be printed with more than 2 decimal places. That is OK.  
+
+2.  FriendlyNumbers.java
+A five-digit integer is said to be friendly if the leftmost digit is divisible by 1, the leftmost two digits are divisible by 2, the leftmost three digits are divisible by 3, the leftmost four digits are divisible by 4, and the leftmost five digits (the five-digit number itself) is divisible by 5. For example, the number 42325 is friendly because 4 is divisible by 1, 42 is divisible by 2, 423 is divisible by 3, 4232 is divisible by 4,and 42325 is divisible by 5. Write a program that prompts for a five-digit integer and determines whether or not the number is “friendly.”
+ 
+3.  TollFreeCall.java
+
+As of the year 2008, a 10-digit phone number that begins with either 800, 888, 877, or 866 is toll free. Write a program that reads in a 10-digit phone number and displays a message that states whether or not the number is toll free. 
+For example:
+input: 8005651009
+output: 800-565-1009 is a toll-free number.
+Hint: Ten digits is too big for int so read the number as a 10-digit integer of type long and break the number into pieces using the operators / and %. 
+ 
+4. Stocks.java
+Write a program that accepts a value ( double ) representing a stock sale and calculates the commission according to the following table:
+Stock Sale         Commission
+< $100                     $20
+$100–$999             $20 + 1% of price over $99
+$1000–$9999         $30 + .5% of price over $999
+$10000–$99999     $75 + .25% of price over $9999
+ 
+5. AmicableNumbers.java
+
+Two numbers are called amicable if the proper divisors of one sums to the other.
+For example, the pair 220 and 284 are amicable numbers:
+The proper divisors of 220 are: 1+2+4+5+10+11+20+22+44+55+110 = 284
+The proper divisors of 284 are:
+1+2+4+71+142 = 220
+Note: 1 is considered a proper divisor, but the number itself is not a proper divisor.  That is, 1 is a proper divisor of 220 but 220 is not a proper divisor of 220.
+Small amicable pairs are very scarce. Some  amicable pairs are  (6232, 6368), (10744,10856), (17296, 18416),  and (9363584, 9437056).
+In Greek mythology, amicable numbers were thought to posses strange mystical powers.  Astrologers used them in drawing up horoscopes.
+ Write a program which accepts two integers and determines whether or not the integers form an amicable pair.
+Allow the user to repeat the calculation as many times as he/she wishes. (see sample run).
+Sample run:
+Enter two numbers: 220 284
+220 and 284 are amicable
+Run again? Type 1 for "Yes" any other digit for "No": 1
+Enter two numbers: 1000 1024
+1000 and 1024 are  not amicable
+Run again? Type 1 for "Yes" any other digit for "No": 0
+Bye.
+ 
