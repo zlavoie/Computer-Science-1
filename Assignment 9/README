@@ -1,0 +1,169 @@
+0 [WARMUP].  Write a program that creates a deck of cards, prints out the deck, shuffles a deck of cards and prints out the shuffled deck. Make sure when you print out each card in the deck you include the rank and suit.
+
+1. Shuffle1.java 
+
+Cut a  deck of cards  into two piles of 26 cards each.  You may assume the deck is un-shuffled, although that does not really matter. Also assume the cards are numbered 1-52.  
+Now perform the following "shuffle" on the deck -- as illustrated in the following diagram. ( Notice  that the  shuffled deck has cards alternately from the two piles.)  
+ 
+Pile1
+1
+2
+3
+4
+...
+
+
+
+26
+Pile2
+27
+28
+29
+30
+...
+
+
+
+52
+Shuffled
+1
+27
+2
+28
+3
+29
+4
+30
+...
+26
+52
+
+
+
+ a. Write a program to determine how many shuffles it takes to restore a deck to its original order.
+Note: You do not need to worry about suits or ranks  Simply assume the cards are numbered 1-52.  You will probably need more than one array for this program.  Break the program up into methods.  You will also  need  method  (boolean ?) to determine whether or not the deck is in its original order.
+b. Now,  shuffle the deck as in the following illustration:
+Pile1
+1
+2
+3
+4
+...
+...
+26
+Pile2
+27
+28
+29
+30
+...
+...
+52
+Shuffled
+27
+1
+28
+2
+29
+3
+30
+4
+...
+52
+26
+Write a  second program  (Shuffle2.java)  to determine how many shuffles it takes to restore the deck to its original order using this second shuffle.
+ 
+The output of your two programs should be:
+For shuffle 1 it takes ??? shuffles to restore the deck.
+For shuffle 2 it takes ??? shuffles to restore the deck.
+
+
+2. RecursiveSelectionSort.java
+
+Write a recursive version of the selection sort.  We derived an iterative version of the sort in class.  Use this as a starting point.  To review how selection sort works, click > here <
+
+3.   MovingDay.java
+ 
+Write a program that lets a user play the game of MovingDay.  Here are the rules of the game:
+- there are N Falses on N squares, M Trues on M squares, and one empty square for a total of N + M + 1 squares
+- the Falses start out on the right, the Trues start out on the left, the empty square is in the middle
+- there are two moves JUMP and SLIDE
+- a False can JUMP over a True or False onto an empty stone
+- a True can JUMP over a False  or False onto an empty stone
+- a False or True can slide onto an empty stone
+- Falses can ONLY move left, Trues can ONLY move right
+- the user WINS when the Falses occupy the left most N squares, the Trues occupy the rightmost M squares, and the empty square is in the middle
+- the user LOSES when the user can't make any more moves and the winning condition hasn't been satisfied
+
+Sample run (bold indicates user input):
+
+---- MovingDay Game ----
+Number of Falses: 3
+Number of Trues: 3
+
+  0   1   2   3   4   5   6
+| T | T | T |   | F | F | F |
+
+Choose move: 4
+Sliding False @ 4 to the LEFT
+
+  0   1   2   3   4   5   6
+| T | T | T | F |   | F | F |
+
+Choose move: 2
+Jumping True @ 2 to the RIGHT
+
+  0   1   2   3   4   5   6
+| T | T |   | F | T | F | F |
+
+
+Choose move: 0
+Cannot Jump True over a True!
+
+Choose move: 1
+Sliding True @ 1 to the RIGHT
+
+  0   1   2   3   4   5   6
+| T |   | T | F | T | F | F |
+
+Choose move: 2
+Cannot Slide True (no empty space).
+Cannot Jump True (no empty space).
+
+Choose move: 0
+Sliding True @ 0 to the RIGHT
+
+  0   1   2   3   4   5   6
+|   | T | T | F | T | F | F |
+
+Choose move: 0
+Sliding True @ 0 to the RIGHT
+
+Game Over!  You lose!
+
+---- MovingDay Game ----
+Number of Falses: 3
+Number of Trues: 3
+
+  0   1   2   3   4   5   6
+| T | T | T |   | F | F | F |
+
+Choose move: 4
+Sliding False @ 4 to the LEFT
+
+
+... much later ...
+
+
+  0   1   2   3   4   5   6
+| F | F | F | T |   | T | T |
+
+Choose move: 3
+Sliding True @ 3 to the RIGHT
+
+  0   1   2   3   4   5   6
+| F | F | F |   | T | T | T |
+
+Congratulations!  You win!
+
+
