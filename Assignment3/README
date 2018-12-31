@@ -1,0 +1,59 @@
+0 [WARMUP].  Write a Celsius to Fahrenheit table program that displays Celsius temperatures from 0 to 100 and their corresponding temperatures in Fahrenheit:
+
+Welcome to the Celsius to Fahrenheit Converter!
+
+Celsius Fahrenheit
+0       32
+1       33.8
+2       35.6
+3       37.4
+4       39.2
+5       41
+6       42.8
+7       44.6
+8       46.4
+...      ...
+99      210.2
+100     212
+ 
+1.   Name  this class PerfectNumbers
+
+A number is called perfect if it equals the sum of its proper divisors. ( 1 is considered a proper divisor) For example, 6 is a perfect number because 6 = 1+3+2. As with amicable numbers, the ancient Greeks attributed mystical powers to perfect numbers.  If you click here,  you can read more  about perfect numbers.
+ 
+Write a program to find all perfect numbers between 2 and 10,000.  There are not many.
+Use for loops for this program.
+Your output should be:
+The perfect numbers between 2 and 10,000 are:
+(list them one per line).
+ 
+ 
+2. Name this class CoinFlips
+
+Write a program that simulates flipping a coin N times and reports the longest consecutive sequence of heads.  The number N is supplied by the user.
+For example if N = 10  and the sequence of 10 coin tosses is
+    0100100011 
+the report that the longest sequence of heads is of length 3. 
+Use (int) ( Math.random() + .5) to generate a random integer, 0 for heads and 1 for tails. Like the Scanner, Math.random() requires you to have the import java.util.*; statement at the top of your program. 
+ 
+3. Name this program Baseball 
+
+ Once a year, the two top American baseball teams play a best-four-out-of-seven-games World Series.   If the teams are evenly matched, then the probability that the series lasts for all seven games is 1/2 × 3/4  × 5/6 = 15/48 = 5/16. In general, the probability that a competition of 2n+1 games, n > 0, between evenly matched teams will “go all the way” and last for all 2n+1 games  is 1/2 × 3/4 × 5/6 × 7/8 × … × (2n-1)/(2n).  So if n = 3, 2n + 1 = 7 games or  if n = 4, then 2n + 1 = 9 games etc.
+Write a program that accepts an integer n, and calculates the probability that a competition of 2n+1 games will go all the way
+
+4. Name this class Number.
+3816547290
+     There is only one ten-digit number that contains every digit 0 through 9 exactly once, and has the property that each number formed from the leftmost j digits is divisible by j.  For example, the number 9876543210 is close but does not qualify.  The number contains each digit once, the first digit 9 is divisible by 1, the number 98 is divisible by 2,  987 is divisible by 3,  9876 is divisible by 4,  98765 is divisible by 5, and 987654 is divisible by 6.  However, the number 9876543 is not divisible by 7.  Note that 98765432 is divisible by 8, 987654321 is divisible by 9, and 9876543210 is divisible by 10, so this number fails only because 9876543 is not divisible by 7. 
+  
+Write a program that accepts a 10-digit integer, n, containing each of the digits 0 through 9, and determines how many such divisions can be performed.  For example, on input 9876543210 your program should report 9 divisions (only 9876543 fails); for 2159730648 the number of divisions is just 1; and for the number 3816547290 (and only this number) the result is 10.   
+  
+(Warning: the largest value of data type int is 231 – 1 = 2,147,483,647, too small for many 10-digit numbers.  An integer of type long can be as large as 263 – 1.) 
+5. Name this class RightTriangle
+
+Write a program that accepts an integer n and prints the following right triangle with base and height n. Use nested for loops 
+     X
+XX
+XXX
+XXXX
+....
+XXXXX.....XXX (n times)
+                                                            
