@@ -1,0 +1,157 @@
+ 
+ 
+1.  Sudoku.java
+       A  Sudoku puzzle is a 9×9 grid partially filled with the digits from  1 to 9, inclusive.  
+  
+
+A Sudoku puzzle
+To solve the puzzle, a player must fill the empty squares of the grid so that each row, each column and each of the nine  3×3 boxes contains every digit from 1 to 9.  That is, no row, column or box contains a duplicate digit.  Here  a solution for the above  puzzle 
+
+
+  
+ A solution 
+  
+Write a program that  reads a 9×9 grid of digits and determines whether or not the grid is a solution to a Sudoku puzzle.  So that, when you are writing and testing your program, you do not have to continually  enter 81 digits into  your program , copy and  paste the following correct solution into your program:
+int[][] solution =          {{4,2,9,8,1,3,5,6,7}, 
+                             {5,1,6,4,7,2,9,3,8},
+                             {7,8,3,6,5,9,2,4,1},
+                             {6,7,2,1,3,4,8,5,9},
+                             {3,9,5,2,8,6,1,7,4},
+                             {8,4,1,7,9,5,6,2,3},
+                             {1,5,8,3,6,7,4,9,2},
+                             {9,3,4,5,2,8,7,1,6},
+                             {2,6,7,9,4,1,3,8,5}};
+To check an incorrect solution, just change a few digits in the correct solution.  Do not retype all 81 numbers. Once you are convinced that your program works, look for a few other correct solutions and try them.
+Here are two more correctly solved puzzles that you can use for data:
+
+ 
+
+ 
+ 
+2 MagicSquare.java. 
+A magic square is an n X n array of positive integers with the property that each row, column and diagonal adds up to the same number:
+
+Here, each row, column and diagonal adds up to 34.
+If n happens to be odd, there is a simple algorithm that creates an n X n magic square:
+Place 1 in the center square of the top row
+ 
+1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Place 2:
+Move up one row and then to the right.  If the row is off the grid place the number in the bottom row of the column.   Notice when placing 2  , if you go up one place and to the right ( from 1) the  position is (row = "-1", column = 2).  So the 2 is placed in row 2, column 2:
+ 
+ 
+1
+ 
+ 
+ 
+ 
+ 
+ 
+2
+Place 3:
+Continue going up and right ( from 2) , if  the column is off the grid, place the number the first column ( column 0) of the row.  Notice the placement of 3, it is in (1,0)
+ 
+1
+ 
+3
+ 
+ 
+ 
+ 
+2
+ 
+Place 4:
+Again move up and right, if a position is occupied, place the new number beneath the previous number.  Notice the placement of 4 below 3.
+ 
+1
+ 
+3
+ 
+ 
+4
+ 
+2
+Continue with these rules:
+Place 5 and 6:
+ 
+1
+ 
+3
+5
+ 
+4
+ 
+2
+ 
+ 
+1
+6
+3
+5
+ 
+4
+ 
+2
+Place 7: 
+Continuing from the  topmost, rightmost corner (6),  try to place the next number in the lowest, leftmost corner.  If that is already taken ( as it is here by 4) place next cumber  underneath the current number...Notice that 6 is in the upper corner,.  We would want to place 7 in the leftmost  lower corner.  However there is a 4 there.  So place 7 underneath the 6.
+ 
+ 
+1
+6
+3
+5
+7
+4
+ 
+2
+ 
+Place 8:
+8
+1
+6
+3
+5
+7
+4
+ 
+2
+Place 9
+ 
+8
+1
+6
+3
+5
+7
+4
+9
+2
+Summary of the algorithm:
+1. Place 1 in the center of the first row ( row 0)
+
+2. Place 2,3,4...n according to the following rules
+
+    Move up and right to a new position (i,j), i.e. row = i, col = j
+if  i = -1 ( row is off the array), put the number in  the last row of  column j, that is in (n-1, j)
+if j = n (column is off the array), put the number in  (i, 0)
+when moving from the top corner square, place the
+next number in the bottom left corner square
+if the place is taken, place the new number under the previous number
+        
+Write a program that accepts an ODD integer n and produces an n by n magic square.
+When you print an array you might print  a tab character after each number:
+             System.out.print(s[i][j] + "\t")    
+Here, \t is the tab character. This will produce neater output.
+Before you do this, try to construct a 5 by 5 by hand so that you understand the rules.
+***************************************************************
+Here is an "almost" magic square ( attributed to the mathematician Euler)  in which each number starting with 1 represents the move of a knight on a chessboard.   It is not perfect  because, although all the columns and rows add up to 260,  the two diagonals do not.
+
+ 
+                
