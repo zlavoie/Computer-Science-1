@@ -1,0 +1,93 @@
+Assignment 1: 
+
+ 
+0 [WARMUP].  Write a temperature converter that will convert degrees fahrenheit to degrees celsius. Here's a sample run of the program (with user input in red):
+
+Welcome to the Temperature Converter!
+Enter your temperature degrees Fahrenheit: 90
+OK. That is 32.22 degrees Celsius.
+Bye! 
+
+Name this program Warmup.java 
+
+1.  Popeye the Sailor wants to sail from Bluto's Marina to Whimpy's Hamburger Haven, where he will dine with his girlfriend Olive Oyl. The one way distance for this trip is 18 Nautical Miles. Popeye wants to know how far that is in "regular miles." A Nautical Mile is equal  1.1508 regular miles. Popeye also wants to know how long it will take to travel this distance. Popeye's boat travels at a top speed of 5.8 Knots (Nautical Miles per hour) and an average speed of 4 Knots.
+
+Write a program to  answer Popeye's questions. Input to the program  should be  a distance in nautical miles, a top speed, and an average speed. Your program should compute and display the distance in regular miles, the estimated travel time in hours at top speed and the estimated travel time in hours at average speed.
+Name your program Popeye.java
+Here is a ample run (User input is in red):
+Enter the distance to travel in nautical miles: 18
+Enter the top speed of the boat in knots: 5.8
+Enter the average speed of the boat in knots: 4.0
+
+
+
+***** Results *****
+The distance to travel in regular miles is: 20.7144 miles
+The best case travel time is: 3.10345 hours at 5.8 knots
+The average case travel time is: 4.5 hours at 4 knots 
+ 
+2. 
+
+Ermestina Money works in a small candy store.  Her customers do not like receiving a lot of heavy change. (No customer wants to receive 99 pennies in change!) Write a program to assist Ernestina calculate change for her customers. Your program should accept an amount of change under one dollar (an integer) and calculate the minimum number of coins (fifty-cent pieces, quarters, nickels, dimes, pennies) needed for that amount.
+
+Name your program Money.java
+Sample run:
+Enter an amount of change in cents: 72
+fifty-cent pieces: 1
+quarters: 0
+dimes: 2
+nickels: 0
+pennies : 2
+Total : 5 coins
+ or
+Enter an amount of change in: 31
+fifty-cent pieces : 0
+quarters: 1
+dimes: 0
+nickels: 1
+pennies: 1
+Total : 3 coins
+3.
+
+
+Here is a variant of a famous old puzzle published originally in The Saturday Evening Post, 1926, in a short story entitled "Coconuts," by Ben Ames Williams. 
+Five men, stranded on an island, spent their first day collecting coconuts. In the evening, they put all the coconuts into a single pile and went to sleep. 
+  
+During the night, the first man wakes up thinking, "I don't trust my buddies," so he takes 1/5 of the coconuts and goes back to sleep.  Then, a monkey shimmies down a tree and takes 1 coconut.  The second man wakes with the same thought; so he too takes 1/5 of the remaining coconuts.  The monkey comes down again and takes a coconut.  Later, the third, fourth, and fifth men do likewise and the monkey takes 1 coconut each time. In the morning, when the five men attempt to divide the remaining coconuts into five equal portions, they have one coconut left, which they willingly give to the monkey.  How many coconuts were in the original pile? 
+There is an infinite number of solutions to this puzzle, and each solution is of the form:
+number of coconuts = 12495 + 15625*a, where a = 0,1,2,3,...
+For example, if a=0, then the original number of coconuts is 12495 + 15625*0 = 12495; and if a=1, then the number is 12495 + 15625*1 = 28120. 
+
+
+Your job is to write a program that accepts a valid integer representing the initial number of coconuts. The only valid integers satisify the equation above. For example, 12495 is a valid integer, but 12496 is not. For this problem, however, don't worry about testing for the case when the user enters an invalid integer. 
+Your program should display how many coconuts each man takes, how many coconuts the monkey takes, as well as how many the men share in the morning. 
+Here is typical output: 
+                Enter the initial number of coconuts: 12495
+                Man 1: 2499 coconuts; Monkey: 1 coconut.
+                Man 2: 1999 coconuts; Monkey: 1 coconut.
+                Man 3: 1599 coconuts; Monkey: 1 coconut. 
+                Man 4: 1279 coconuts; Monkey: 1 coconut. 
+                Man 5: 1023 coconuts; Monkey: 1 coconut. 
+                4091 coconuts remain, each gets 818 and 1 for the monkey. 
+  
+Name your program Monkey.java
+4. 
+
+
+Write a program that plays the following interactive “magician's” game.  A player should secretly choose four digits and  make two numbers with these digits.  For example, if a player uses digits 1,2,6, and 7 then the two numbers might be 2176 and 7612.   Next instruct the player to 
+a.  calculate the positive difference between the two numbers, (subtract the smaller from the larger), 
+b.  secretly choose any digit in the difference except a zero, and 
+c.  enter the remaining three digits in any order, one per line 
+Your program will dazzle the player by supplying the secret digit.  
+Hint:  The sum of the digits in the difference must be a multiple of 9.  Use the % operator.
+Name the program: MathMagic.java 
+Here is a sample run: 
+1. Choose 4 digits
+2. Make two four-digit numbers with these digits
+3. Subtract the smaller from the larger.
+4. Secretly pick a non-zero digit from the difference.
+5. Enter the remaining three digits, one per line
+1
+9
+9
+The secret digit is 8
