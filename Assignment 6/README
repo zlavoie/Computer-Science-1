@@ -1,0 +1,214 @@
+0 [WARMUP].  Write a modified version of the Tower of Hanoi problem that counts the minimum number of moves for the number of disks provided by the user:
+
+public static void main(String[] args)
+{
+   Scanner input = new Scanner(System.in);
+   System.out.println("Enter number of disks:");
+
+   int disks = input.nextInt();
+   int numberMoves = move(disks, 1, 3, 2);
+   System.out.println("Number of moves is: "+numberMoves);
+}
+
+
+Here's a sample output of the program: Enter number of disks: 3/br> D1: 1 -> 3
+D2: 1 -> 2
+D1: 3 -> 2
+D3: 1 -> 3
+D1: 2 -> 1
+D2: 2 -> 3
+D1: 1 -> 3
+Number of moves is: 7/br> 
+
+1 GcdAndLcm.java
+The greatest common divisor (gcd) of positive integers a and b is the largest positive integer that evenly divides both a and b.  For example, the greatest common divisor of 15 and 25 is 5, the greatest common divisor of 10 and 100 is 10, and the greatest common  divisor of 8 and 19 is 1.
+Euclid showed that if a > b, the greatest common divisor  of a and b is the same as the greatest common divisor of b and a%b., that is 
+                gcd of a and b = gcd of b and a % b        ( a >=b)
+For example, 
+the gcd of a = 27 and b = 18  is the same as 
+the gcd of a = 18 and b = 9 (because 9 = 27 % 18)  =
+the gcd of a =  9 and b = 0 (because 0 = 18 % 9)   =
+9
+the gcd of 15 and 6 =
+the gcd of 6 and 3 (15 % 6) =
+the gcd of 3 and 0 (6 % 3) =
+3
+the gcd of 11 and 5 =
+the gcd of 5  and 1  (11 %5) =
+the gcd of 1 and 0   (5 % 1 ) =
+1
+ 
+Notice how each of these ends: b is 0 and the gcd is a.
+The least common multiple (lcm) of two numbers a and b is the smallest non-zero number that is a multiple of both a and b.  For example
+the lcm of 5 and 3 is 15     (15 is the smallest multiple of both 5 and 3)
+the lcm of 9 and 6 is 18
+the lcm of 27 and 6 is 54 and
+the lcm of 20 and 4 is 20
+The least common multiple of a and b can be found as
+                (lcm of a and b) = (a * b)/ (gcd of a and b)
+For example 
+the lcm of 9 and 6 = (9 * 6)/ (gcd of 9 and 6) = 54/3 = 18
+the lcm of 27 and 6 = (27 *6)/(gcd of 27 and 6) = 162/3 =54
+
+the lcm of 20 and 4 = (20*4)/(gcd 20 and 4) = 80/4 = 20
+                
+Write a class with two methods 
+int gcd (a,b) // returns the greatest common divisor of positive integers a and b  
+int lcm (a,b) // returns the least common multiple of positive integers  a and b
+Include a main method that tests these two methods.  The main method should include a loop so that a user can repeat the test.
+ 
+Sample output:
+Enter two positive integers: 27 6
+The gcd of 27 and 6 is 3
+The lcm of 27 and 6 is 54
+Run again? 1 for Yes any other digit for No: 1
+Enter two positive integers: 4 20
+The gcd of 4 and 20 is 4
+The lcm of 4 and 20 is 20
+Run again? 1 for Yes any other digit for No: 0
+NOTE: The user can enter the integers in any order.  The largest need not be first.  However, when computing gcd (a,b), a must be the larger integer.  So before attempting to compute the gcd, your method must determine whether or not a is the larger.  If b happens to be larger than a, then switch the values in a and b.
+Remember to switch the values in two variables, you need and extra temporary variable.
+
+ 
+
+
+
+The Car or the Goat?
+2.  Monty.java
+On the TV game show, "Let's Make a Deal," host Monty Hall shows a contestant three closed doors. Monty tells the contestant that behind one of the doors is a new car but behind each of the other doors there is a goat.  The contestant chooses one door. Monty then opens one of the other doors-- the one with the goat.  The contestant now has the option: stick with the original door or switch. Write a computer simulation of this game.  The computer is Monty Hall and the user is the contestant.
+Sample Output: 
+    Hello, I am Monty Hall and welcome to "Let's Make a Deal." Here is our first contestant.
+Welcome to the show.  Now, in front of you are three doors.  Behind two of these doors is a goat but behind the third door is a shiny new Jaguar. You may choose one of the doors. Which will it be : 1, 2, or 3?
+3
+OK , you choose door 3.  But before I show you what is behind door 3, let's take a look behind door 1.  Let's open door 1.  That's right, behind door 1 is a goat.
+Now do you want to keep door 3 or switch to door 2?
+3
+You are keeping door 3.  Let's open door 3 and see what is there.
+Sorry, you got the goat.
+Want to play again?
+n
+You should divide the program into a sequence of method calls.  The main(...) method should be just a few so lines. You decide what the methods should do.  There is not a single right answer. However, keep the methods simple.  A method should probably perform a single task. 
+Switch or stay? Keep the original door or change? It may seem that it makes no difference butyou are twice as likely to win if you switch.  Play 100 times and switch each time....how many times did you get the car? 
+Now, check out these websites:
+http://math.ucsd.edu/~crypto/Monty/Montytitle.html
+http://utstat.toronto.edu/david/MH.html
+http://www.shodor.org/interactivate/activities/monty3/index.html
+
+ 
+ 
+3.  Evens.java
+ 
+Write a RECURSIVE method 
+            public static int evens( int n)
+ that (a) prints out the even numbers between n and 0 inclusive, (b) returns the number of even numbers between 0 and n inclusive, for any positive integer n.
+For example,
+                evens(9): prints out 8,6,4,2,0 and returns 5 
+                evens(4): prints out 4,2,0 and returns 3 
+               evens(21): prints out 20,18,16,14,12,10,8,6,4,2,0 and returns 11 
+Make sure that you include a base case.  What is the recursive case? Let the recursive case solve a simpler problem.
+Use  this main method to test your program
+public static void main (String[] args)
+{
+        Scanner input = new Scanner(System.in);
+         System.out.print("Enter a positive integer or 0 to end: ");
+         int n = input.nextInt();
+
+         while (n != 0)
+        {
+               System.out.print("The number of even integers between 0 and " + n + " is: ");
+              System.out.println(evens(n));
+               System.out.print("Enter a positive integer or 0 to end: ");
+                n = input.nextInt();
+           } 
+         System.out.println("Bye");
+} 
+Sample run:
+Enter a positive integer or 0 to end: 6
+The number of even integers between 0 and 6 is: 6, 4, 2, 0... 4 
+Enter a positive integer or 0 to end: 11 
+The number of even integers between 0 and 11 is: 10, 8, 6, 4, 2, 0... 6 
+Enter a positive integer or 0 to end: 0
+Bye
+ 
+4.  Pascal.java
+
+Blaise Pascal
+
+
+Write a program that calculates and displays the first 8 rows of Pascal's triangle. Your program should include a recursive method,   
+                int Pascal(int r, int  e) , 
+which returns the entry e that is in  row r.
+
+The rows are numbered 0,1,2,3... The entries in each row are numbered 0,1,2,3.  In row 0 there is only one entry the 0th entry which is 1 , in row 1 the entries are labeled 0,1; in row 2 entries are labeled 0,1,2; row 3 entries are 0,1,2,3 etc.
+ 
+                                           
+
+
+
+
+
+
+
+
+
+
+row 0
+
+
+
+
+1
+
+
+
+
+row 1
+
+
+
+1
+
+1
+
+
+
+row 2
+
+
+1
+
+2
+
+1
+
+
+row 3
+
+1
+
+3
+
+3
+
+1
+
+row 4
+1
+
+4
+
+6
+
+4
+
+1
+Note: each row begins and ends with 1 (i.e. entry 0 is always 1 and entry r of row r is also 1) and each of the other entries in a row is the sum of the two entries just above it.  For example the six in row four is the sum of 3 and 3 from row 3. 
+Thus Pascal(4,3) returns 4; Pascal(3,1) returns 3 and Pascal(0,0) returns 1.
+To get full credit you must output the triangle in the above format.  
+If you cannot display the output as shown above,  then display the triangle as follows. (You do not have to display the green stuff--- that's just to help you)
+1                                                Pascal(0,0)
+1     1                                          Pascal(1,0)     Pascal(1,1)
+1    2    1                                     Pascal(2,0)     Pascal(2,1)    Pascal(2,2)
+1    3    3     1                              Pascal( 3,0)     Pascal(3,1)    Pascal(3,2)    Pascal(3,3)
+1    4    6     4    1                        Pascal( 4,0)     Pascal(4,1)    Pascal(4,2)    Pascal(4,3)     Pascal(4,4)
+ 
