@@ -1,0 +1,47 @@
+Problem 0: Warmup
+Write a program that opens a file "input.txt" and displays the contents of the file to the screen. You must make sure that the file "input.txt" is in the same directory as your java program. 
+
+Problem 1: Word Rotation
+Write an application that accepts a string and an integer n as input, prints the string, rotates it n words to the right (this way --->), and prints it again. For example, the input: 
+   Enter number of words to rotate: 3
+
+   here is a good example for this
+results in the output: 
+   here is a good example for this
+   example for this here is a good
+One way you can determine the end of the input string is to use input.hasNext(). Recall from our discussion of files that this method will return true if the input stream has more data and false if the stream has reached the end-of-file. For keyboard input you can signal the end-of-file by pressing the ctrl button and the "d" character at the same time (ctrl-d). 
+Problem 2: Soccer League Standings
+You manage a kids soccer league and maintain a file with the results of each game. Each line of your file holds the outcome of a single game: the names of the two teams together with the scores. For example, the first five lines of the file might be: 
+Panthers    4   Tigers      3
+Sky         2   Panthers    0
+Tigers      1   Sky         6
+Sky         2   Panthers    1
+Tigers      1   Sky         4
+Write a program that reads this file and prints a list of the teams and team records. For example, using the file displayed above, the output would be: 
+Team        Wins        Losses
+Panthers    1           2
+Sky         4           0
+Tigers      0           3
+NOTE: To get full credit the teams must be printed out in alphabetical order. You cannot assume that the team names will appear in the file in alphabetical order.
+Problem 3: The UnJumbler
+The JUMBLE is a puzzle that rearranges the letters of a word. You task is to unscramble the letters and discover the original word. For example the jumbled word "AKNET" can be unscrambled to form the word "TAKEN". 
+Write a program that accepts a jumbled word and displays the original word. Your program should generate a possible word, and check the word against a dictionary file. If the generated word is found in the dictionary file, then word is displayed. It's OK if your program discovers several possible original words for the jumbled word. 
+You can use the dictionary file ->here<- Unzip the file and use the file 6of12.txt.
+NOTE: You need to use the StringPermuter class to help you with this assignment. This class will return a list of all permutations of a string which you can use to test against the dictionary. 
+public static void main(String[] args)
+{
+    StringPermuter sp = new StringPermuter();
+    String[] result = sp.permute("elloh");
+
+    for (int i=0; i<result.length; i++)
+    {
+      System.out.println(result[i]);
+    }
+}
+Problem 4: Trigonometry 
+Write a program that presents the user with a list of graphics options: 
+draw a circle with a specified radius that grows and shrinks 10 times 
+draw a rectangle with a specified length and width 
+draw a single sine curve that starts at x=0 and ends at x=300 and is centered on y=150. The curve should start at (0,150), rise to its maximum value at (75,0), intersect (150,0), fall to its minimum value at (225,300), and rise back to (300,0) (so half the time the curve is above y=150, and half the time the curve is below 150). 
+draw a circle with radius 50 at the center of the graphics window and draw a second circle with radius 5 that orbits one time around the first circle (use redraw to animate the orbiting circle). 
+Use the Render class and Circle class from the course website. You may want to review some trigonometry. <
