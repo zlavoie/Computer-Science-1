@@ -1,0 +1,51 @@
+PROBLEM ONE: DIE Class 
+Write a class SuperDie that models a single die with an arbitrary number of sides, not just six. A die instantiated with the default constructor should have six sides. The methods of this class should be: 
+creates a die with six sides (default) 
+creates a die with N sides (passed in as an argument) 
+returns the number of sides on the die 
+changes the number of sides on the die 
+rolls the die and returns it's value 
+returns the number of times the die has been rolled 
+Write a second class SuperDieExample which includes a main method that tests all the methods of your class.
+
+
+PROBLEM TWO: COUNTER Class 
+The member (counter) of a Counter object holds a non-negative integer. The methods of the Counter class: 
+allows a client to add 1 to counter
+sets the value of the coutner to zero
+retrieves the current value of counter
+creates a counter with the counter set to zero (default) 
+creates a counter with the counter set to N (passed in as an argument) 
+Write a second class CounterExample which includes a main method that tests all the methods of your class in the following manner:
+instantiates a Counter object 
+reads a sequence of integers until a zero is entered 
+uses the Counter object to determine how many non-zero integers comprise the sequence 
+
+
+
+PROBLEM THREE: Door Class 
+A computer game usually has many different objects that can be seen and manipulated. One typical object is a door. Whether a player runs through a castle, attacks the forces of an evil empire, or places furniture in a room, a door often comes into play. 
+Implement a Door class as described below as well as a class TestDoor class that instantiates three Door objects labeled “Enter,” “Exit,” and “Treasure.” The “Enter” door should be left unlocked and opened. The “Exit” door should be left closed and locked. The “Treasure” door should be left open but locked.
+A Door object can 
+display an inscription 
+be either open or closed, and 
+be either locked or unlocked. 
+Here are some rules about how Doors work: 
+Once the writing on a Door is set, it cannot be changed. 
+You may open a Door if and only if it is unlocked and closed, 
+You may close a Door if and only if it is open. 
+You may lock a Door if and only if it is unlocked, and unlock a Door if and only if it is locked. You should be able to check whether or not a Door is closed, check whether or not it is locked, and look at the writing on the Door if there is any. 
+The instance variables of a Door class are: 
+String inscription, 
+boolean locked, and 
+boolean closed. 
+The methods (all public) should be: 
+door(String c); // Initializes a Door with inscription c, closed and locked. 
+isClosed(); // Returns true if the Door is closed 
+isLocked(); // Returns true if a Door is locked. 
+open(); // Opens a Door if it is closed and unlocked. 
+close(); // Closes a Door if it is open. 
+lock(); // Locks a Door if it is unlocked. 
+unlock(); // Unlocks a Door if it is locked. 
+getInscription(); // Return's a door's inscription as a string
+Appropriate error messages should be displayed and no changes to the Door should be made, if any conditions of the functions are violated. 
