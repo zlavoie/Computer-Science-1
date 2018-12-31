@@ -1,0 +1,153 @@
+
+
+
+
+1. PokerHand.java 
+You can simulate a deck of cards by creating an array of 52 integers with the values 0 to 51. Each integer represents a card consisting of a Suit (Hearts, Diamonds, Clubs, Spades) and a Rank (2,3,4,5,6,7,8,9,10,J,Q,K,A). The 52 integer array represents the deck of cards. 
+To compute the Suit of a card, take the card's value and / 13... you'll end up with a number: 0=Hearts, 1=Diamonds, 2=Clubs, 3=Spades.
+To compute the Rank of a card, take the card's value and % 13 then add 2... you'll end up a number: 2=2, 3=3, 4=4, .. 10=10, 11=J, 12=Q, 13=K, 14=A)
+For example:
+If the integer representing the card card was the number 41 then: 
+the  suit is 41/13 = 3 (Spades) and 
+the rank is 41%13 + 2 = 2 + 2 = 4 
+so the card is the 4 of Spades 
+If the integer representing the card was the number 13 then 
+the suit is 26/13 = 2 ( Clubs) 
+the rank is 26%13 + 2 = 0 + 2   = 2 
+so the card is the 2 of Clubs 
+You wish to determine the probability of obtaining a FULL HOUSE  A full house consists of three cards of one rank and two of another.  For example three kings and two aces  or three fives and 2 sevens.
+Write a program that deals 1,000,000 poker hands and counts the number of hands that constitute a full house. Shuffle the cards before dealing a hand.  
+You CANNOT just generate a random number for each card.  That does not work and will not give you the correct probability.  Store the cards in an array and uses a shuffle method which randomly distributes the cards in the deck.
+Output:
+Print the percentage of hands that are a full house.  Don't attempt to print all million hands.
+Hint :   For each hand, use an array (ranks)  to keep track of the number of cards of each rank.  The array ranks should be indexed from 2 to 14.  You will not use positions 0 or 1.
+For example if the hand is
+5 of diamonds
+7 of clubs
+5 of spades
+5 of hearts
+7 of hearts
+the ranks array would be
+index   value
+0	0 (never used)
+1	0 (never used)
+2	0
+3       0
+4	0
+5	3
+6	0
+7	2
+8	0
+9	0
+10	0
+11	0 (Jack)
+12	0 (Queen)
+13	0 (King)
+14	0 (Ace)
+The hand consists of 3 fives and 2 sevens. Notice there is a three in slot 5 and a 2 in slot 7 indicating  a full house
+If a hand is 
+    5 of clubs
+    3 of diamonds
+    Ace of hearts
+    Ace of Spades
+    6 of spades
+The array would have the form
+index   value
+0	0 (never used)
+1	0 (never used)
+2	0
+3	1
+4	0
+5       1
+6	1
+7	0	
+8	0
+9	0
+10	0
+11	0 (Jack)
+12	0 (Queen)
+13	0 (King)
+14	2 (Ace)
+ 
+Notice there are 2 Aces ( a 2 in slot 14) , 1 three, 1, five, and 1 six.  Not a full house
+
+
+2.    DigitSort.java
+There are many sorting algorithms. Here's one that sorts by comparing individual digits at the same significant position.
+Integers can be partially sorted by comparing the first significant digit of each number:
+133 507 003 105 => 133 003 105 507
+observe that the numbers are in order with respect to the first significant digit.
+Integers can be completely sorted in several passes, one pass for each significant digit:
+START: 133 507 003 105
+1st PASS: 133 003 105 507
+2nd PASS: 003 105 507 133
+3rd PASS: 003 105 133 507
+Write a program which fills the array with the following 4 digit integers and sorts the array using this digit based sort. Your program should output the partially sorted array after each pass of the sortByDigit method so you can verify it is working properly. Your program should display the completely sorted array at after the sort is completed. 
+The main program should look like this:
+public static void main(String[] args)
+{
+   int[] array = {1234, 0003, 9876, 3321, 6719};
+   int size = 5;
+   
+   sortByDigit(array,size);
+   displayArray(array,size);  
+   
+}
+
+
+
+3. Reverse.java
+Write a RECURSIVE method
+                public static void reverse int (int[] a, int lo, int hi)
+that "reverses" the elements in an array a.
+The parameter lo is the index of the first value in the array and hi is the index of the last value in the array. ( We assume lo <= hi.)
+ 
+For example, if
+                a = [ 5,6,7,8,9]  
+the the initial call
+            reverse(a,0, 4)  // note lo = 0, hi = 4
+rearranges the array as 
+            a = [ 9,8,7,6,5]
+The method may NOT use an auxiliary array for storage. 
+Here is a simple algorithm
+         //Base cases   
+        if ( hi == lo) // just one element 
+                return;
+           if ( hi - lo == 1 )  // two elements
+           {
+                 swap the elements in a[lo] and a[hi]
+                 return;
+            }
+            //Recursive case  
+            swap the elements in a[lo] and a[hi]  // first and last elements
+            Ask your "friend" to reverse the sub-array indexed by lo+1 and hi -1
+Suppose a = [4,5,6,7,8,9],a call to 
+           reverse (a,0,5) begins as        
+1. swaps 4 and 9 // [9,5,6,7,8,4]
+2. recursively reverse the sub-array [5,6,7,8]
+Remember: to swap two values you need to uses a temporary variable.
+Your main program should:
+1. Ask the size of the array (if it is n, then the last element is a[n-1])
+2. read n values into an array n
+3. call reverse(a,0, n-1) // lo == 0, hi == n-1
+4. print the array, a
+
+
+4. Sequence.java
+ Write a program that displays the longest increasing subsequence in an integer array.  For example, the longest increasing subsequence of 
+4, 5, 7, 3, 12, 2, 5, 6, 19, 21, 14  is
+2, 5, 6, 19, 21. 
+And the longest increasing subsequence of 
+                    2 3 4 1 3 5 7 18 5 6 7 4 5 6 is 
+1 3 5 7 18
+You may assume that there is always an increasing  subsequence of at least two elements.  If more than one sequence qualifies...either one will suufic.  For example, the longest increasing subsequence of
+                1 3 5 7 9 2 4 6 8 10 2 4 1 is either
+1  3 5 7 9   or 2 4 6 8 10  note that both are length 5.
+Include a method that reads data into an array of at most 25 elements.  Use -999 as a sentinel value. 
+ 
+Sample output:
+Enter numbers end with -999:
+   2 3 4 1 3 5 7 18 5 6 7 4 5 6 -999 
+The longest subsequence is  1 3 5 7 18.
+The length of this subsequence is 5.
+ 
