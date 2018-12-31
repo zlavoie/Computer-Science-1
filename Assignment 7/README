@@ -1,0 +1,205 @@
+0 [WARMUP].  Write a program that fills an 100 element array with random integers between 0 and 99, then prints out the contents of the array.
+array[0] = 42 
+array[1] = 12 
+array[2] = 99 
+...
+array[99] = 44 
+
+           
+
+
+1. Hanoi4.java
+ 
+
+This problem is a variation of the Tower of Hanoi problem. Instead of using three pegs, you will use four pegs.
+Write a program which gives the moves for a four peg game. The 4 peg program requires fewer moves than the three peg program. Here are the number of moves required for three pegs
+n
+Three pegs (2n-1)
+1
+1
+2
+3
+3
+7
+4
+15
+5
+31
+6
+63
+7
+127
+8
+255
+9
+511
+10
+1023
+11
+2047
+12
+4095
+20
+220 -1
+Your program should perform fewer moves than the three peg version. for any value of n. you program cannot have more moves.  
+You will need special cases if the number of disks is less than 3. For n >= 3 your program must use all 4 pegs.
+ Your output have the following format:
+Enter the number of disks : 2
+Moves for 2 disks:
+1--> 2
+1--> 3
+2--> 3
+
+
+Again 1 for Yes? 1
+
+Enter the number of disks : 5
+Moves for 5 disks:
+1--> 3
+1--> 4
+1--> 2
+4--> 2
+3--> 2
+1--> 3
+1--> 4
+3--> 4
+2--> 3
+2--> 1
+2--> 4
+1--> 4
+3--> 4
+
+Again 1 for Yes? 0
+
+
+2. Planets.java
+
+ 
+Write a program that will allow the user to calculate his or her weight
+on any given planet in the solar system.  
+Data:
+Note: Each planet has a code number (0-8)
+Planet 
+Planet Surface Gravity  
+0 (Mercury) 
+0.39 
+1 (Venus) 
+0.91 
+2 (Earth) 
+1.00 
+3 (Mars) 
+0.38 
+4 (Jupiter) 
+2.87 
+5 (Saturn) 
+1.32 
+6 (Uranus) 
+0.93 
+7 (Neptune) 
+1.23 
+8 (Pluto) 
+0.03 
+Thus, if your weight on earth is 100 pounds then your weight on mars is 100*.38 = 38 pounds and your weight on Saturn is 100*1.32  = 132 pounds.
+The following example should tell you what the program must do:
+Sample run:
+
+Welcome to the Planet Calculator!
+Enter 1 to find your weight on a given planet.
+Enter 2 to see your weight on all planets.
+Enter 3 to display  all planets and gravity factors,
+Enter 4 to show this menu at any time.
+Enter any other number to exit 
+
+Choice: 1 
+
+Enter your weight on Earth, in pounds: 200 
+Enter the code number of the planet you want : 4
+
+Your weight on Jupiter is 574 pounds.
+
+Choice: 3
+The planets and gravity factors are: 
+0
+Mercury
+0.39 
+1
+Venus
+0.91 
+2
+Earth
+1.00 
+3
+Mars
+0.38 
+4
+Jupiter
+2.87 
+5
+Saturn
+1.32 
+6
+Uranus
+0.93 
+7
+Neptune
+1.23 
+8
+Pluto
+0.03 
+
+
+Choice: 4
+Welcome to the Planet Calculator!
+Enter 1 to find your weight on a given planet.
+Enter 2 to see your weight on all planets.
+Enter 3 to display  all planets and gravity factors,
+Enter 4 to show this menu at any time.
+Enter any other number to exit 
+
+Choice: 7
+Have a nice day!
+
+
+
+Notes:
+
+1) You should use methods:  one for each menu option at the very
+least.
+
+2) Store the data in an array indexed from 0 to 8: 
+You can do this as: 
+double[] gravity= { .39, .91, 1.00,  etc.  };
+
+Getting a little ahead but not essential
+If  it makes it easier for you, you can also have an array of strings that holds the planet names:
+String[ ] planets = {"Mercury", "Venus", "Earth", "Mars" etc};  // note uppercase S (String)
+This array is indexed from 0 to 8  
+
+ 
+and  the statement
+System.out.println(planets[0]) prints Mercury
+System.out.println(planets[1]) prints Venus   etc.
+ 
+This is not necessary but it could cut down on your typing.
+3. CoinFlip.java
+Write a program that simulates flipping a coin 100,000 times and reports the number of "runs of heads" of length i, where i ranges from one to the length of the longest sequence of heads.  For example, "HHTHTHTHHTHHHHTH" is of length 4.  Consequently, the program would display the following output:
+Length 
+Number of Runs of Heads
+1
+3
+2 
+2
+3 
+0 
+4
+1
+
+4. Randomize.java
+
+Write a program that displays a list of numbers between 0 and N in random order WITH NO DUPLICATES.
+
+Here's a sample run of the program:
+
+----- Welcome to the Randomizer -----
+To display a list of random numbers between 0 and N enter an N: 10
+3 9 1 2 7 0 4 6 10 5 8
