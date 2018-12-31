@@ -1,0 +1,212 @@
+0 [WARMUP].  Write a program that calls a method where the method prints "There is a method to this madness." The main method appears below and you MUST use this main method without altering it:
+
+public static void main(String[] args)
+{
+   methodMadness();
+}
+
+
+When the main program executes the line "There is a method to this madness." appears 100 times.
+There is a method to this madness.
+There is a method to this madness.
+There is a method to this madness.
+There is a method to this madness.
+There is a method to this madness.
+There is a method to this madness.
+There is a method to this madness.
+...
+There is a method to this madness.
+ 
+
+ 
+1. TwentyOne.java 
+Write a program to play Dice 21 against the computer. The object of the game is to get a score of 21 or come  close to 21 without exceeding 21.
+The game is played with 2 dice. Each time the player rolls the dice the number is added to his/her score.  When the score reaches 14 the player switches to a single die. The player can roll as many times as he/she likes or may stop on any score less than 22.  If a player gets a score more than 21  he/she loses.
+After the player rolls the computer plays. If the player has busted ( score over 21) the computer just issues a message and the game ends, the computer wins otherwise the  computer continues  rolling as long as  its score is lower than or equal to the player's score and less than 22.
+Your program should be able to repeat the game as often as the player would like. and report the number of wins and losses fore the player
+Sample output:
+Enter 1 to roll 2 to quit : 1
+You rolled a 5. Score is 5
+Enter 1 to roll 2 to quit : 1
+You rolled a 6. Score is 11
+Enter 1 to roll 2 to quit : 1
+You rolled a 7. Score is 18
+Enter 1 to roll 2 to quit : 2
+Your score is 18
+Computer rolls
+Computer rolls 3. Score is 3
+Computer rolls 8. Score is 11
+Computer rolls 11. Score is 22
+Computer stops .  Score is 22
+Player wins.
+Play again? Enter 1 for yes: 1
+Enter 1 to roll 2 to quit : 1
+You rolled a 12. Score is 12
+Enter 1 to roll 2 to quit : 1
+You rolled a 5. Score is 17
+Enter 1 to roll 2 to quit : 1
+You rolled a 1. Score is 18
+Enter 1 to roll 2 to quit : 2
+Your score is 18
+Computer rolls
+Computer rolls 3. Score is 3
+Computer rolls 8. Score is 11
+Computer rolls 10. Score is 21
+Computer stops .  Score is 21.
+Computer wins
+Play again? Enter 1 for yes: 2
+Games won: 1
+Games Lost: 1
+ 
+2. Insipid.java
+58 89   145  42  20  4  16  37  58 89  145 42  20
+ 
+Consider an iterative procedure that begins with a positive integer N0 and generates a sequence by the rule:
+    Ni+1 = the sum of the squares of the digits of Ni.
+For example, if you begin with 25 the sequence is
+25 
+29 (since 29 = 22 + 52)  
+85 (since 85 = 22 + 92)  
+89 (89 = 82 + 52) etc.
+Notes: 
+if any term in the sequence equals 1, then all successive terms are 1
+if any term in the sequence equals 58, then the sequence cycles:
+                 …, 58, 89, 145, 42, 20, 4, 16, 37, 58, 89, 145…..
+
+            It is known that either condition a or b MUST occur.
+An integer N0 is called insipid if condition (a) occurs. 
+Write a program to test for insipid integers between 1 and 99.
+Your program will prompt the user for a number from 1 to 99.  It
+will then print out the sequence as described above and tell whether the number is insipid or not.
+Sample Run :
+number : 2
+The sequence starting at 2 is : 2 4 16 37 58
+Not insipid
+Run again (1 for yes)1
+number : 13
+The sequence starting at 13 is : 13 10 1
+insipid
+Run again (1 for yes) 0
+ 
+Note: You will need to separate the digits of a number of at most three digits. Use / and %.  The largest number you will have is a three digit number.  Think about it!
+3. SquareRoot.java
+
+There are many methods for extracting square roots, some of which go back to ancient times.
+
+Below is one such method:
+
+Problem: Approximate  the square root of N:
+
+Method: Start your calculation with an initial guess or approximation. (You can use 1 but any other number is just as good). Call this first guess/approximation "Old." A new improved approximation is  then 
+
+                            New = (Old + N/Old)/2. 
+
+Now, call this new value Old and repeat the process.  
+
+You should print out all the calculated approximations starting with 1 and ending with the final value. The data types for N, Old, and New should be double. For example, the first few lines of output for N=2 are:
+
+1   --- The first guess or approximation
+
+1.5 ---          (1+[2/1])/2
+
+1.41667  --   (1.5+[2/1.5])/2
+
+1.41422 --    (1.41667+ [2/1.41667])/2
+
+1.41421  --    (1.41422 + [2/1.41422])/2
+
+ 
+
+If the user enters a negative number, you program should respond accordingly i.e. issue an error message.
+
+Sample Run
+
+For what number would you like the square root ? 2
+Enter your first guess:1
+
+The approximations are:
+1
+1.51.41667
+1.41422
+1.41421
+
+You should stop computing new guesses when you have two guesses in a row that agree up through the first four places after the decimal point. You can check this by looking at the absolute value of the difference.  The absolute value of x  can be obtained as  Math,Abs(x)
+
+
+
+4.
+
+On the planet Rodentia, the alien squirrels play a strange game of chance with alien crows using three six sided dice.  Each die is marked with the following symbols: MERCURY, VENUS, EARTH, MARS, JUPITER, and SUN.  If a squirrel throws a nut into the air and throws the dice and the dice land in one of the configurations below, then nuts rain down from the heavens (thanks to the crows).  Otherwise, the crows get to keep the nut.
+
+The following table shows the winning patterns and nuts awarded:
+
+Die One
+One Two
+Die Three
+Nuts
+SUN 
+SUN 
+SUN 
+128
+JUPITER 
+JUPITER 
+JUPITER/SUN 
+64
+MARS 
+MARS 
+MARS/SUN 
+32
+EARTH 
+EARTH 
+EARTH/SUN 
+16
+MERCURY 
+MERCURY 
+MERCURY 
+8
+MERCURY 
+MERCURY 
+!!! 
+4
+MERCURY 
+!!! 
+!!! 
+2
+
+The notation JUPITER/SUN means that either a JUPITER or a SUN can appear in that position for the nuts to rain down, and “!!!“ means that any symbol can appear in that position for the nuts to rain down. Thus, getting MERCURY on the first die is automatically good for at least two nuts, no matter what appears on the other two die. 
+
+Write a program that allows a squirrel to win or lose nuts.  You must write the following methods and use them in your main program:
+
+int rollDie() - rolls a six sided die
+void faceToScreen(int face) - takes a number 1 to 6 and prints out the appropriate die face to the screen
+int getBet() - prompts the squirrel for the bet, then returns the number of nuts the squirrel wants to bet
+int computeNutPayout(int die1, int die2, int die3, int bet) - given the face values for the dice and the bet, return the payout to the squirrel
+
+Here's a sample run of the program:
+
+----> Rodentia Crow Alliance for Nutty Squirrels <----
+Welcome squirrel!  You have 10 nuts.  How many would you like to throw up in the air (0 to quit)?
+1
+
+Rolling dice-> D1: MERCURY D2: VENUS D3:  MARS
+Congratulations!  You won 2 nuts!
+
+Welcome squirrel!  You have 12 nuts.  How many would you like to throw up in the air (0 to quit)?
+2
+
+Rolling dice-> D1: EARTH D2: EARTH D3:  SUN
+Congratulations!  You won 32 nuts!
+
+Welcome squirrel!  You have 44 nuts.  How many would you like to throw up in the air (0 to quit)?
+20
+
+Rolling dice-> D1: EARTH D2: EARTH D3: MARS
+Sorry squirre!  You lost!
+
+Welcome squirrel!  You have 24 nuts.  How many would you like to throw up in the air (0 to quit)?
+0
+
+Bye squirrel!  You started with 10 nuts and you ended with 24 nuts.  Caw!  Caw!
+  
+
+                             
